@@ -1,0 +1,120 @@
+##### index.html page
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form Certification Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey for Pizza!</h1>
+    <p id="description">If you love pizza, please fill out this form! Thanks!</p>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal Info (required)</legend>
+        <label for="name" id="name-label">Enter your name: <input id="name" name="name" type="text" placeholder="John Smith" required  /></label>
+        <label for="email" id="email-label">Enter your email: <input id="email" name="email" type="email" placeholder="JohnSmith@email.com" required/></label>
+        <label for="number" id="number-label">Enter your age: <input id="number" name="age" type="number" min="0" max="120" placeholder="Make sure your number is between 0 and 120."/></label>
+      </fieldset>
+      <fieldset>
+        <legend>Pizza Type (required)</legend>
+        <label for="thin-crust"><input id="thin-crust" type="radio" name="name" class="inline" value="thin-crust" checked /> Thin-Crust</label>
+        <label for="hand-tossed"><input id="hand-tossed" type="radio" name="name" class="inline" value="hand-tossed" /> Hand-Tossed</label>
+        <label for="topping"> What is your favorite pizza topping?
+          <select id="dropdown" name="topping">
+            <option value="">(Select One)</option>
+            <option value="1">Pepperoni</option>
+            <option value="2">Sausage</option>
+            <option value="3">Cheese</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="comments">Comments:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="I like pizza because it tastes amazing!"></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Pizza Promise</legend>
+        <label for="promise">
+          <input class="inline" id="promise" type="checkbox" required name="promise" value="pizza-oath" /> I love pizza </label>
+          <input class="inline" id="promise" type="checkbox" required name="promise" value="pizza-oath" /> I will always eat pizza </label>
+          <input class="inline" id="promise" type="checkbox" required name="promise" value="pizza-oath" /> Pizza is Life 
+        </label> 
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+
+##### CSS.Styles Page
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+.inline{
+  display: inline; 
+}
+
+
